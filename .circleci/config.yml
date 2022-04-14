@@ -14,6 +14,10 @@ jobs:
           command: bundle install
 
       - run:
+         　name: update GitHub pages
+           command: bundle update github-pages
+
+      - run:
           name: build the jekyll site
           command: bundle exec jekyll build
 
