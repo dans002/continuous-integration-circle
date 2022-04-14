@@ -56,7 +56,7 @@ jobs:
 
       - run:
           name: run html proofer
-          command: bundle exec htmlproofer ./_site --check-html
+          command: bundle exec htmlproofer ./_site --check-html --disable-external 
 
       - run:
           name: notify test is finished
@@ -68,6 +68,6 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - testlinks:
-          requires:
-            - build
+      - testlinks
+          #requires:
+           # - build
