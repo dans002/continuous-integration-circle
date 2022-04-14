@@ -47,6 +47,14 @@ jobs:
           command: echo "The build is finished!"
 
       - run:
+          name: build
+          command: chmod +x script/bootstrap
+          
+      - run:
+          name: test
+          command: bchmod +x script/cibuild
+
+      - run:
           name: run html proofer
           command: bundle exec htmlproofer ./_site --check-html
 
